@@ -1,69 +1,49 @@
-# Site
-name: "Choi Memories"
-title: "Choi Memories"
-description: "Choi Memories"
-logo: 'assets/images/avatar.png'
-favicon: 'assets/images/avatar.png'
-google_analytics: ''
-disqus: ''
-mailchimp-list: ''
-include: ["_pages"]
-permalink: /:title/
-email: ceju317013@gmail.com
 
-# Authors
-authors:
-  choi:
-    name: Choi
-    display_name: Choi
-    avatar: 'assets/images/avatar.png'
-    email: ceju317013@gmail.com
-    description: "kkk"
+title: Catbook #Your awesome title
+email: #youremail@domain.com
+description: > # this means to ignore newlines until "baseurl"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
 
-# Plugins
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-archives
-  - jekyll-figure
+baseurl: # the subpath of the site
+url: http://starry99.github.io/catbook # the base hostname & protocol for your site
 
-# Archives
-jekyll-archives:
-  enabled:
-    - categories
-  layout: archive
-  permalinks:
-    category: '/category/:name/'
+permalink: /:year-:month/:title
+timezone:
 
-# Pagination
-paginate: 6
-paginate_path: /page:num/
+favicon: /assets/img/favicon.ico
 
-# Other
-highlighter: none
-markdown: kramdown
-kramdown:
-   syntax_highlighter_opts:
-      disable : true
+google_analytics: #UA—XXXXXXXX-X
+disqus_shortname: #disqus shortname
+cusdis:
+    app_id: #your cusdis app_id
 
+user:
+  name: Catbook
+  pic: /assets/img/cat.jpg
+  picAlt: "catbook"
+  job: a category-centric theme
+  aboutme: true # comment this out if you don't need the 'about' page.
 
+exclude:
+  - README.md
+  - LICENSE
+  - github
 
-# Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
-adsense: "disabled"
-adsense-data-ad-client: "ca-pub-3412143450191416"
-adsense-data-ad-slot: "1363087678"
+defaults:
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+      comment: true   
 
-# Lazy Images ("enabled" or "disabled")
-lazyimages: "disabled"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+markdown: kramdown 
 
-# Post Author Box ("enabled" or "disabled")
-authorbox: "enabled"
-
-# Sass
-sass:
-  sass_dir: _sass
-  style: compressed
-
-exclude: [changelog.md, LICENSE.txt, Gemfile, Gemfile.lock]
+# Filtering Content
+show_drafts: null
+limit_posts: 0
+future:      false
+unpublished: false

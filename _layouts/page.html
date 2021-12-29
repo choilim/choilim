@@ -1,18 +1,24 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
 
-<div class="page-single">
-    <div class="entry-header">       
-        <h1 class="posttitle">{{ page.title }}</h1>        
-    </div>
-</div>
+{% include head.html %}
 
-<!-- Featured Image -->
-{% include featured-image.html %}
+<body>
+  <div class="content">
 
-<!-- Content -->
-{% include article.html %}
+    {% include header.html %}
 
-<!-- Comments if not disabled with comments: false -->
-{% include comments.html %}
+    {% include mobile_menu.html %}
+    
+    <main class="main">
+
+    {{ content }}
+
+    </main>
+
+  </div>
+
+  {% include footer.html %}
+  {% include js.html %}
+</body>
+</html>
