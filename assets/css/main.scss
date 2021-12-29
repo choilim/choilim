@@ -1,6 +1,6 @@
---- 
-# do not remove 
---- 
+---
+# do not remove
+---
 
 @import 'normalize';
 @import 'code_style';
@@ -11,7 +11,7 @@
    ========================================================================== */
 
 @mixin lightMode {
-    --bg_color: #eee;
+    --bg_color: #D4CEF2;
     --header_bg: #fafafa;
     --content_bg: #fff;
     --archive_font: #000;
@@ -32,20 +32,20 @@
     --blockquote: #333;
     --footer_font: #858585;
     --footer_font_a: #000;
-    --border_radius: 15px;
+    --border_radius: 10px;
 
 }
 
 @mixin darkMode {
-    --bg_color: #1C1C1E;
+    --bg_color: #FFD9EC;
     --header_bg: #24292E;
     --content_bg: #2F3437;
     --archive_font: #CACCCE;
     --archive_title: #46a891;
     --archive_title_hover: #87CDBD;
     --name_font: #FFAA00;
-    --job_font: #CACCCE;
-    --nav_font: #8d7edc;
+    --job_font: #909090;
+    --nav_font: #FFFFFF;
     --nav_font_hover: #D4CEF2;
     --shadow_color: rgba(0, 0, 0, 1);
     --post_title: #46a891;
@@ -57,7 +57,7 @@
     --inlinecode_text: #FFAA00;
     --blockquote: #CACCCE;
     --footer_font_a: #d1d1d1;
-    --border_radius: 1px;
+    --border_radius: 10px;
 }
 
 
@@ -186,7 +186,7 @@ img {
         margin-right: 1rem;
     }
 
-    
+
 
 ::-webkit-scrollbar {
     width: 8px;
@@ -290,7 +290,7 @@ img {
     position: absolute;
     top: 0;
     border-radius: var(--border_radius);
-    box-shadow: 0 0 2px 2px var(--shadow_color);
+    box-shadow: 0 0 0px 0px var(--shadow_color);
 
     @include mobile-only {
         width: 100%;
@@ -329,6 +329,7 @@ img {
 
     img {
         @extend .header_circle;
+        margin-bottom: 20px;
     }
 
     &:hover {
@@ -346,8 +347,10 @@ img {
 
 .header_name {
     display: block;
-    color: var(--name_font);
+    color: var(--nav_font);
     font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .header_job {
@@ -356,9 +359,10 @@ img {
     color: var(--job_font);
     font-size: 0.75em;
     font-weight: 700;
+    padding: 0px 50px;
 }
 
-.theme_changer {   
+.theme_changer {
     cursor: pointer;
     input {
         display: none;
@@ -370,9 +374,10 @@ img {
             border-radius: 50%;
             position: relative;
             transition: box-shadow .5s ease 0s, transform .5s ease .1s;
+            margin-bottom: 20px;
 
             &:before {
-                
+
                 content: '';
                 width: inherit;
                 height: inherit;
@@ -383,7 +388,7 @@ img {
             }
 
             &:after {
-                
+
                 background: url('../img/s.png') no-repeat center;
                 border-radius: 50%;
                 content: '';
